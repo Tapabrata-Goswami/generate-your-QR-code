@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Poppins font Adding -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Generate your QR code. 🧐</title>
+</head>
+
+<body>
+    <!-- Main Section -->
+    <section>
+        <div class="container">
+            <span>Generate your QR code. 🧐</span>
+            <form id="qr-input-form">
+                <input type="text" id="qr-input" placeholder="Give me a information">
+                <input type="submit" id="generate-btn" value="Generate QR">
+            </form>
+            <div class="qr-code-data">
+                <img src="" id="qr" class="qr-code">
+            </div>
+            <div id="funny" class="funcky-design">
+                <span id="sad">Hey! 😟 Can you generate a QR.</span>
+                <span id="smile">Hurrah!! 😃 Thank you my 💓 .</span>
+            </div>
+            <div class="follow">
+                made by <a href="https://github.com/Tapabrata-Goswami" target="_blank"> @Tapabrata</a>
+            </div>
+        </div>
+
+    </section>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#generate-btn").on("click",function(e){
+                e.preventDefault();
+                var qrdata = $("#qr-input").val();
+                if(qrdata == ""){
+                    console.log("Please Enter a Value ");
+                }else{
+                    $("#qr").attr("src","https://api.qrserver.com/v1/create-qr-code/?size=200x200&margin=10&data="+qrdata);
+                    $("#qr").attr("alt",qrdata);
+                    $("#sad").css("display","none");
+                    $("#smile").css("display","block");
+                    $("#qr-input-form").trigger("reset");
+                    $("#qr-input-form").css("display","none")
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
