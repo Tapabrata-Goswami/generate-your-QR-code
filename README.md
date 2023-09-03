@@ -1,5 +1,5 @@
 
-![Generate Your QR code](images/Screenshot_3.png)
+![Generate Your QR code](images/Screenshot.png)
 
 ## Description
 
