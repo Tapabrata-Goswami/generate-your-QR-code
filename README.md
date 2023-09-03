@@ -76,4 +76,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 If you have any questions or encounter issues with this project, please [create an issue](https://github.com/Tapabrata-Goswami/generate-your-QR-code/issues) on GitHub.
 
-Enjoy generating QR codes with this simple tool!
