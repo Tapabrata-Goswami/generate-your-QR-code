@@ -11,6 +11,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+        <!-- Font Awesome icon -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <title>Generate your QR code. 🧐</title>
 </head>
 
@@ -23,7 +26,7 @@
                 <input type="text" id="qr-input" placeholder="Give me a information">
                 <input type="submit" id="generate-btn" value="Generate QR">
             </form>
-            <div class="qr-code-data">
+            <div class="qr-code-data" style="display: none;">
                 <img src="" id="qr" class="qr-code">
             </div>
             <div id="funny" class="funcky-design">
@@ -31,7 +34,8 @@
                 <span id="smile">Hurrah!! 😃 Thank you my 💓 .</span>
             </div>
             <div class="follow">
-                made by <a href="https://github.com/Tapabrata-Goswami" target="_blank"> @Tapabrata</a>
+                <div class="github"><a href="https://github.com/Tapabrata-Goswami/generate-your-QR-code/" target="_blank"><i class="fa-brands fa-github"></i></a></div>
+                <div class="me">made by <a href="https://github.com/Tapabrata-Goswami" target="_blank"> @Tapabrata</a></div>
             </div>
         </div>
 
@@ -39,8 +43,10 @@
     <script type="text/javascript" src="js/jquery.js"></script>
     <script>
         $(document).ready(function(){
+            
             $("#generate-btn").on("click",function(e){
                 e.preventDefault();
+                $(".qr-code-data").css("display","");
                 var qrdata = $("#qr-input").val();
                 if(qrdata == ""){
                     console.log("Please Enter a Value ");

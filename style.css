@@ -73,16 +73,22 @@ input[type=submit]:hover{
     box-shadow: 2px 2px 7px var(--charcoal);
 }
 .follow{
-    margin-top:5px;
-    display:flex;
-    justify-content: center;
-    color:#333536;
-    font-weight: 400;
-    font-size: 14px;
+    margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  color: #333536;
+  font-weight: 400;
+  font-size: 14px;
+  background-color: whitesmoke;
+  padding: 4px 20px;
+  border-radius: 5px;
 }
 .follow a{
     padding: 0 3px;
     color:rgb(180, 12, 110);
+}
+.fa-brands{
+    font-size: 20px;
 }
 
 @media only screen and (max-width:480px){
